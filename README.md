@@ -1,44 +1,49 @@
-# APOLINK
+# Apolink - Pharmacy Information System Database
 
-A simple Pharmacy Information System database project built using PostgreSQL.
+Apolink is a personal database project built using PostgreSQL to simulate pharmacy operational processes.
 
 ## Features
 
-- Patient transaction management
-- Medicine and medical supplies inventory
+- Patient transactions
+- Product inventory management
 - Supplier management
+- Goods receiving transactions
 - Stock monitoring
-- Stock opname management
-- Sales reporting
-- Purchase reporting
+- Stock opname
+- Reporting and analytics
 
-## Database Design
+## Database Tables
 
-The database consists of:
+### Master Data
 
 - pasien
 - produk
 - supplier
+
+### Transactions
+
 - transaksi
 - detail_transaksi
 - penerimaan_barang
 - detail_penerimaan
+
+### Inventory
+
 - stok_opname
 
-## Example Reports
+## Sample Reports
 
-### Top Selling Products
+- Patient transaction history
+- Product sales report
+- Critical stock report
+- Supplier purchase report
+- Best-selling products report
 
-Shows products with the highest sales volume.
+## Technology
 
-### Critical Stock Monitoring
+- PostgreSQL
+- pgAdmin 4
 
-Identifies products with stock levels below minimum threshold.
+## Author
 
-### Supplier Purchase Report
-
-Displays total purchases grouped by supplier.
-
-### Patient Transaction History
-
-Displays historical purchases for each patient.
+Devina Yaritsha
