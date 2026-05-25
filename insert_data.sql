@@ -1,4 +1,4 @@
--- menambahkan data di table pasien
+-- create data in table patient
 insert into apolink.pasien (nama_pasien, jenis_kelamin, tanggal_lahir, alamat, no_telp, no_rm)
 VALUES
 ('Andi Pratama', 'Laki-laki', '1998-05-10', 'Makassar', '081234567890', 'AP001'),
@@ -8,7 +8,7 @@ VALUES
 ('Tata Juwita', 'Perempuan', '1980-12-15', 'Makassar', '089876543221', 'AP005');
 select * from apolink.pasien;
 
--- menambahkan data di table supplier
+-- create data in table supplier
 INSERT INTO apolink.supplier
 (nama_supplier, alamat, no_telp)
 VALUES
@@ -18,7 +18,7 @@ VALUES
 ('PT Sumber Rejeki', 'Samarinda', '041444444');
 select * from apolink.supplier;
 
--- menambahkan data di table produk
+-- create data in table product
 INSERT INTO apolink.produk
 (nama_produk, kategori, stok)
 VALUES
@@ -32,7 +32,7 @@ VALUES
 ('Kaos Tangan Operasi', 'Alkes', 30);
 select * from apolink.produk;
 
--- menambahkan data di table penerimaan barang
+-- create data in table supplier acceptance
 INSERT INTO apolink.penerimaan_barang
 (supplier_id, tanggal_penerimaan, no_faktur, total_nilai)
 VALUES
@@ -40,7 +40,7 @@ VALUES
 (2, '2026-05-24', 'FKT002', 1000);
 select * from apolink.penerimaan_barang;
 
--- menambahkan data di table detail penerimaan baranf
+-- create data in table detail supplier acceptance
 INSERT INTO apolink.detail_penerimaan
 (detailpenerimaan_id, penerimaan_id, produk_id, jumlah_masuk, harga_beli, subtotal)
 VALUES
@@ -49,7 +49,7 @@ VALUES
 (3, 1, 7, 75, 32500,2400000);
 select * from apolink.detail_penerimaan;
 
--- menambahkan data di table transaksi
+-- create data in table transaction
 INSERT INTO apolink.transaksi
 (pasien_id, tanggal_transaksi, total_transaksi)
 VALUES
@@ -57,7 +57,7 @@ VALUES
 (2, '2026-05-23', 57500);
 select * from apolink.transaksi;
 
--- menambahkan data di table detail transaksi
+-- create data in table detail transaction
 INSERT INTO apolink.detail_transaksi
 (transaksi_id, produk_id, jumlah, harga_jual, subtotal)
 VALUES
@@ -66,7 +66,7 @@ VALUES
 (2, 4, 5, 10000, 50000);
 select * from apolink.detail_transaksi;
 
--- menambahkan data di table stok opname
+-- create data in table stock opname
 INSERT INTO apolink.stok_opname
 (stokopname_id, tanggal_opname, keterangan)
 VALUES
@@ -74,7 +74,7 @@ VALUES
 (2, '2026-04-30', 'baik');
 select * from apolink.stok_opname;
 
--- menambahkan data di detail stok opname
+-- create data in table detail stock opname
 INSERT INTO apolink.detail_stok_opname
 (detailstokopname_id, stokopname_id, produk_id, stok_sistem, stok_fisik, selisih)
 VALUES
