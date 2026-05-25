@@ -77,6 +77,8 @@ CREATE TABLE apolink.detail_penerimaan (
     detailpenerimaan_id SERIAL PRIMARY KEY,
     penerimaan_id INTEGER NOT NULL,
     produk_id INTEGER NOT NULL,
+	no_batch VARCHAR (50),
+	tanggal_expired DATE,
     jumlah_masuk INTEGER NOT NULL,
     harga_beli NUMERIC(12,2) NOT NULL,
     subtotal NUMERIC(12,2) NOT NULL,
