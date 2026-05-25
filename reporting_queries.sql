@@ -33,7 +33,7 @@ from apolink.produk order by stok asc;
 -- show critical stock report
 select nama_produk, stok from apolink.produk where stok < 50;
 
--- show supplier acceptance histroy
+-- show supplier receiving histroy
 select pb.penerimaan_id, s.nama_supplier, pb.tanggal_penerimaan, pb.no_faktur
 from apolink.penerimaan_barang pb
 	join apolink.supplier s on pb.supplier_id = s.supplier_id;
