@@ -1,4 +1,4 @@
--- membuat table pasien
+-- create table patient
 CREATE TABLE apolink.pasien (
     pasien_id SERIAL PRIMARY KEY,
     nama_pasien VARCHAR(100) NOT NULL,
@@ -9,7 +9,7 @@ CREATE TABLE apolink.pasien (
     no_rm VARCHAR(30) UNIQUE
 );
 
--- membuat table produk
+-- create table product
 CREATE TABLE apolink.produk (
     produk_id SERIAL PRIMARY KEY,
     nama_produk VARCHAR(150) NOT NULL,
@@ -17,7 +17,7 @@ CREATE TABLE apolink.produk (
     stok INTEGER NOT NULL DEFAULT 0
 );
 
--- membuat table supplier
+-- create table supplier
 CREATE TABLE apolink.supplier (
     supplier_id SERIAL PRIMARY KEY,
     nama_supplier VARCHAR(150) NOT NULL,
@@ -25,7 +25,7 @@ CREATE TABLE apolink.supplier (
     no_telp VARCHAR(20)
 );
 
--- membuat table transaksi
+-- create table transaction
 CREATE TABLE apolink.transaksi (
     transaksi_id SERIAL PRIMARY KEY,
     pasien_id INTEGER NOT NULL,
@@ -38,7 +38,7 @@ CREATE TABLE apolink.transaksi (
         ON DELETE RESTRICT
 );
 
--- membuat table detail transaksi
+-- create table detail transaction
 CREATE TABLE apolink.detail_transaksi (
     detailtransaksi_id SERIAL PRIMARY KEY,
     transaksi_id INTEGER NOT NULL,
@@ -58,7 +58,7 @@ CREATE TABLE apolink.detail_transaksi (
         ON DELETE RESTRICT
 );
 
--- membuat table penerimaan barang
+-- create table supplier receiving
 CREATE TABLE apolink.penerimaan_barang (
     penerimaan_id SERIAL PRIMARY KEY,
     supplier_id INTEGER NOT NULL,
@@ -72,7 +72,7 @@ CREATE TABLE apolink.penerimaan_barang (
         ON DELETE RESTRICT
 );
 
--- membuat table detail penerimaan
+-- create table detail supplier receiving
 CREATE TABLE apolink.detail_penerimaan (
     detailpenerimaan_id SERIAL PRIMARY KEY,
     penerimaan_id INTEGER NOT NULL,
@@ -92,14 +92,14 @@ CREATE TABLE apolink.detail_penerimaan (
         ON DELETE RESTRICT
 );
 
--- membuat table stok opname
+-- create table stock opname
 CREATE TABLE apolink.stok_opname (
     stokopname_id SERIAL PRIMARY KEY,
     tanggal_opname DATE NOT NULL DEFAULT CURRENT_DATE,
     keterangan TEXT
 );
 
--- membuat table detail stok opname
+-- create table detail stock opname
 CREATE TABLE apolink.detail_stok_opname (
     detailstokopname_id SERIAL PRIMARY KEY,
     stokopname_id INTEGER NOT NULL,
