@@ -32,7 +32,7 @@ VALUES
 ('Kaos Tangan Operasi', 'Alkes', 30);
 select * from apolink.produk;
 
--- create data for supplier receiving
+-- create data for table supplier receiving
 INSERT INTO apolink.penerimaan_barang
 (supplier_id, tanggal_penerimaan, no_faktur, total_nilai)
 VALUES
@@ -40,7 +40,7 @@ VALUES
 (2, '2026-05-24', 'FKT002', 1000);
 select * from apolink.penerimaan_barang;
 
--- create data for detail supplier receiving
+-- create data for table detail supplier receiving
 INSERT INTO apolink.detail_penerimaan
 (detailpenerimaan_id, penerimaan_id, produk_id, jumlah_masuk, harga_beli, subtotal, no_batch,
 tanggal_expired)
