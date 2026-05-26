@@ -38,6 +38,7 @@ INSERT INTO apolink.penerimaan_barang
 VALUES
 (1, '2026-05-23', 'FKT001', 750),
 (2, '2026-05-24', 'FKT002', 1000);
+(3, '2026-05-25', 'FKT003', 500);
 select * from apolink.penerimaan_barang;
 
 -- create data for table detail supplier receiving
@@ -45,11 +46,11 @@ INSERT INTO apolink.detail_penerimaan
 (detailpenerimaan_id, penerimaan_id, produk_id, jumlah_masuk, harga_beli, subtotal, no_batch,
 tanggal_expired)
 VALUES
-(1, 1, 1, 100, 5000,500000, 'DP0001', '2027-12-31'),
-(2, 2, 2, 150, 20000,3000000, 'DP0002', '2028-12-31'),
-(3, 1, 7, 75, 32500,2400000, 'DP0003', '2028-01-01')
-(4, 2, 2, 100, 2000,200000, 'DP0004', '2026-06-26'),
-(5, 1, 3, 100, 5000,500000, 'DP0005', '2026-09-26');
+(1, 1, 1, 100, 5000,500000, 'DP0001', '2025-12-31'),
+(2, 2, 2, 150, 20000,3000000, 'DP0002', '2027-12-31'),
+(3, 1, 7, 75, 32500,2400000, 'DP0003', '2028-01-01'),
+(4, 2, 3, 50, 2000,100000, 'DP0004', '2026-06-26'),
+(5, 1, 4, 100, 5000,500000, 'DP0005', '2026-08-26');
 select * from apolink.detail_penerimaan;
 
 -- create data for table transaction
