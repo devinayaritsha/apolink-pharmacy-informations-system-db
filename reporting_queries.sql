@@ -81,6 +81,19 @@ from apolink.detail_transaksi dt
 select produk_id, nama_produk, stok
 from apolink.produk order by nama_produk;
 
+-- show product near expired report
+select p.nama_produk, dp.no_batch, dp.tanggal_expired,
+dp.tanggal_expired - current_date as sisa_hari,
+case
+	when dp.tanggal_expired < current_date then 'Expired'
+	when dp.tanggal_expired <= current_date + interval '30 days' then 'Segera Expired'
+	when dp.tanggal_expired <= current_date + interval '90 days' then 'Mendekati Expired'
+	else 'Aman'
+end as status_expired
+from apolink.detail_penerimaan dp 
+	join apolink.produk p on dp.produk_id = p.produk_id
+order by dp.tanggal_expired asc;
+
 -- show stock opname result and stock conformity status
 select so.tanggal_opname, p.nama_produk, dso.stok_sistem, dso.stok_fisik, dso.selisih, so.keterangan,
 	case
